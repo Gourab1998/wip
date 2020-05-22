@@ -16,14 +16,19 @@ public class Q9 {
 		Scanner sc=new Scanner(System.in);
 		int i,j;
 		System.out.println("Enter array of numbers as \n eg:- \"10,3,6,1,2,7,9\"");
+//used to take input
+/***********************************************************************/
 		String s=sc.nextLine();
 		ArrayList<Integer> list=new ArrayList<Integer>();
 		for (String st : s.split(",")) {
-			st=st.trim();
+			st=st.trim(); //cleans white-spaces, if any, could cause error in integer conversion
 			list.add(Integer.parseInt(st));
 		}
-		// this part not recommended but done to make the code easier to understand.
-		//converts ArrayList<Integer> collection to int[].
+/***********************************************************************/
+//input ends
+		
+// this part not recommended but done to make the code easier to understand.
+//converts ArrayList<Integer> collection to int[].
 /***********************************************************************/
 		int arr[]=new int[list.size()]; 
 		for (i=0;i<list.size();i++) {

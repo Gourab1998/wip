@@ -15,7 +15,10 @@ public class Q10 {
 	 */
 	public static void main(String[] args) {
 		//advice:- learn collection of java before proceeding coding becomes much easier
-		//can also be done using regular array but causes wastage of memory. 
+		//can also be done using regular array but causes wastage of memory.
+		
+//used to take input
+/***********************************************************************/
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter array of numbers as \n eg:- \"10,3,6,1,2,7,9\"");
 		String s=sc.nextLine();
@@ -23,9 +26,11 @@ public class Q10 {
 		ArrayList<Integer> even=new ArrayList<Integer>();
 		ArrayList<Integer> odd=new ArrayList<Integer>();
 		for (String st : s.split(",")) {
-			st=st.trim();
+			st=st.trim();	//cleans white-spaces, if any, could cause error in integer conversion
 			list.add(Integer.parseInt(st));
 		}
+/***********************************************************************/
+//input ends
 		for(Integer i:list) {
 			if(i%2==0) {
 				even.add(i);

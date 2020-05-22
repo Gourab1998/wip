@@ -26,11 +26,17 @@ public class Q8 {
 		// and stays 1 unless a 7 found.
 		int sum=0,sum2=0,flag=0;
 		System.out.println("Enter array of numbers as \n eg:- \"10,3,6,1,2,7,9\"");
+//used to take input
+/***********************************************************************/
 		String s=sc.nextLine();
 		ArrayList<Integer> list=new ArrayList<Integer>();
 		for (String i : s.split(",")) {
+			i=i.trim();  //cleans white-spaces, if any, could cause error in integer conversion
 			list.add(Integer.parseInt(i));
 		}
+/***********************************************************************/
+//input ends
+		
 		for (Integer i: list) {
 			if (i==6) {				//check if 6 or not
 				if(flag==1) {		//if 6 was already existing as in case "6, 8, 9, 6,4,5,7"
